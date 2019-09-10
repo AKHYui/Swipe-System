@@ -8,6 +8,8 @@ Maincontrol::Maincontrol(QWidget *parent) :
     ui(new Ui::Maincontrol)
 {
     ui->setupUi(this);
+    Maincontrol::setWindowTitle(QString("Welcome!"));
+    setAutoFillBackground(true);
 }
 
 Maincontrol::~Maincontrol()

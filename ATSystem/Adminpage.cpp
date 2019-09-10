@@ -7,6 +7,7 @@ Adminpage::Adminpage(QWidget *parent) :
     ui(new Ui::Adminpage)
 {
     ui->setupUi(this);
+    Adminpage::setWindowTitle(QString("Admin Permission!Power it!"));
 }
 
 Adminpage::~Adminpage()

@@ -7,6 +7,7 @@ Updatepage::Updatepage(QWidget *parent) :
     ui(new Ui::Updatepage)
 {
     ui->setupUi(this);
+    Updatepage::setWindowTitle(QString("Update"));
 }
 
 Updatepage::~Updatepage()

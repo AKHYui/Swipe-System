@@ -42,3 +42,6 @@ FORMS    += Login.ui \
     Selectpage.ui \
     Adminlogin.ui \
     Adminpage.ui
+
+RESOURCES += \
+    resource.qrc

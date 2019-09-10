@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Homepage.ui'
 **
-** Created: Mon Sep 9 19:07:21 2019
+** Created: Tue Sep 10 22:26:22 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -30,13 +30,13 @@ public:
     {
         if (Homepage->objectName().isEmpty())
             Homepage->setObjectName(QString::fromUtf8("Homepage"));
-        Homepage->resize(702, 497);
+        Homepage->resize(573, 424);
         ctrl = new QPushButton(Homepage);
         ctrl->setObjectName(QString::fromUtf8("ctrl"));
-        ctrl->setGeometry(QRect(40, 40, 111, 71));
+        ctrl->setGeometry(QRect(100, 310, 91, 31));
         pushButton_2 = new QPushButton(Homepage);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(50, 260, 151, 81));
+        pushButton_2->setGeometry(QRect(390, 310, 91, 31));
 
         retranslateUi(Homepage);
 

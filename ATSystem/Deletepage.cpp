@@ -7,6 +7,7 @@ Deletepage::Deletepage(QWidget *parent) :
     ui(new Ui::Deletepage)
 {
     ui->setupUi(this);
+    Deletepage::setWindowTitle(QString("Delete information"));
 }
 
 Deletepage::~Deletepage()

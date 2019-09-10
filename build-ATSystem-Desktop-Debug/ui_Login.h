@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Login.ui'
 **
-** Created: Mon Sep 9 16:32:26 2019
+** Created: Tue Sep 10 22:23:44 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -36,25 +36,26 @@ public:
     {
         if (Login->objectName().isEmpty())
             Login->setObjectName(QString::fromUtf8("Login"));
-        Login->resize(722, 542);
+        Login->resize(305, 181);
+        Login->setStyleSheet(QString::fromUtf8(""));
         label = new QLabel(Login);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(240, 170, 72, 15));
+        label->setGeometry(QRect(40, 30, 72, 15));
         label_2 = new QLabel(Login);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(240, 210, 72, 15));
+        label_2->setGeometry(QRect(40, 70, 72, 15));
         username = new QLineEdit(Login);
         username->setObjectName(QString::fromUtf8("username"));
-        username->setGeometry(QRect(330, 170, 113, 21));
+        username->setGeometry(QRect(130, 30, 113, 21));
         pwd = new QLineEdit(Login);
         pwd->setObjectName(QString::fromUtf8("pwd"));
-        pwd->setGeometry(QRect(330, 210, 113, 21));
+        pwd->setGeometry(QRect(130, 70, 113, 21));
         login = new QPushButton(Login);
         login->setObjectName(QString::fromUtf8("login"));
-        login->setGeometry(QRect(230, 270, 93, 28));
+        login->setGeometry(QRect(30, 130, 93, 28));
         pushButton_2 = new QPushButton(Login);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(390, 270, 91, 31));
+        pushButton_2->setGeometry(QRect(190, 130, 91, 31));
 
         retranslateUi(Login);
 

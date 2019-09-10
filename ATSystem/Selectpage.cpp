@@ -7,6 +7,7 @@ Selectpage::Selectpage(QWidget *parent) :
     ui(new Ui::Selectpage)
 {
     ui->setupUi(this);
+    Selectpage::setWindowTitle(QString("Select it!"));
 }
 
 Selectpage::~Selectpage()

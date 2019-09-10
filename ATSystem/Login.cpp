@@ -11,6 +11,7 @@ Login::Login(QWidget *parent) :
 Login::~Login()
 {
     delete ui;
+    setStyleSheet("background-color: gray");
 }
 
 //重置功能

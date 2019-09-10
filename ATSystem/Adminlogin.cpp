@@ -7,6 +7,7 @@ Adminlogin::Adminlogin(QWidget *parent) :
     ui(new Ui::Adminlogin)
 {
     ui->setupUi(this);
+    Adminlogin::setWindowTitle(QString("Give me your admin password please!"));
 }
 
 Adminlogin::~Adminlogin()

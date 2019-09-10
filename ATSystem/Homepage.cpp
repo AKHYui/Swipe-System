@@ -7,6 +7,7 @@ Homepage::Homepage(QWidget *parent) :
     ui(new Ui::Homepage)
 {
     ui->setupUi(this);
+    Homepage::setWindowTitle(QString("Index"));
 }
 
 Homepage::~Homepage()

@@ -7,6 +7,7 @@ Addpage::Addpage(QWidget *parent) :
     ui(new Ui::Addpage)
 {
     ui->setupUi(this);
+    Addpage::setWindowTitle(QString("Add information"));
 }
 
 Addpage::~Addpage()

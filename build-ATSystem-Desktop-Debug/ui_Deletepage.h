@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Deletepage.ui'
 **
-** Created: Mon Sep 9 19:12:25 2019
+** Created: Tue Sep 10 20:24:43 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -48,7 +48,7 @@ public:
     {
         if (Deletepage->objectName().isEmpty())
             Deletepage->setObjectName(QString::fromUtf8("Deletepage"));
-        Deletepage->resize(763, 520);
+        Deletepage->resize(681, 432);
         delback = new QPushButton(Deletepage);
         delback->setObjectName(QString::fromUtf8("delback"));
         delback->setGeometry(QRect(10, 10, 93, 28));

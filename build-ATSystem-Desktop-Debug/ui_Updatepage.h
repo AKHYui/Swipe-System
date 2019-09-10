@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Updatepage.ui'
 **
-** Created: Mon Sep 9 19:25:48 2019
+** Created: Tue Sep 10 20:24:43 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -55,7 +55,7 @@ public:
     {
         if (Updatepage->objectName().isEmpty())
             Updatepage->setObjectName(QString::fromUtf8("Updatepage"));
-        Updatepage->resize(728, 509);
+        Updatepage->resize(696, 421);
         updateback = new QPushButton(Updatepage);
         updateback->setObjectName(QString::fromUtf8("updateback"));
         updateback->setGeometry(QRect(10, 10, 93, 28));

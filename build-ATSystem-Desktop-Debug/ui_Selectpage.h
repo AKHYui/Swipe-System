@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Selectpage.ui'
 **
-** Created: Mon Sep 9 19:28:14 2019
+** Created: Tue Sep 10 20:24:43 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -52,7 +52,7 @@ public:
     {
         if (Selectpage->objectName().isEmpty())
             Selectpage->setObjectName(QString::fromUtf8("Selectpage"));
-        Selectpage->resize(690, 633);
+        Selectpage->resize(574, 591);
         sel_back = new QPushButton(Selectpage);
         sel_back->setObjectName(QString::fromUtf8("sel_back"));
         sel_back->setGeometry(QRect(0, 0, 93, 28));
