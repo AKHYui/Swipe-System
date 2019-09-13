@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Adminlogin.ui'
 **
-** Created: Tue Sep 10 22:16:44 2019
+** Created: Thu Sep 12 19:51:33 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
