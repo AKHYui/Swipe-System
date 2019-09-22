@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Updatepage.h'
 **
-** Created: Sun Sep 22 12:49:47 2019
+** Created: Sun Sep 22 13:24:26 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Updatepage[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,14 +32,15 @@ static const uint qt_meta_data_Updatepage[] = {
 
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x08,
-      36,   11,   11,   11, 0x08,
-      62,   11,   11,   11, 0x08,
+      19,   11,   11,   11, 0x08,
+      43,   11,   11,   11, 0x08,
+      69,   11,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Updatepage[] = {
-    "Updatepage\0\0on_updateback_clicked()\0"
+    "Updatepage\0\0load()\0on_updateback_clicked()\0"
     "on_btn_dbselect_clicked()\0"
     "on_pbn_addName_clicked()\0"
 };
@@ -73,12 +74,13 @@ int Updatepage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: on_updateback_clicked(); break;
-        case 1: on_btn_dbselect_clicked(); break;
-        case 2: on_pbn_addName_clicked(); break;
+        case 0: load(); break;
+        case 1: on_updateback_clicked(); break;
+        case 2: on_btn_dbselect_clicked(); break;
+        case 3: on_pbn_addName_clicked(); break;
         default: ;
         }
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }

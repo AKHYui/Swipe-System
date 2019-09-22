@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Addpage.h'
 **
-** Created: Mon Sep 16 19:41:04 2019
+** Created: Sun Sep 22 13:10:52 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Addpage[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,14 +32,15 @@ static const uint qt_meta_data_Addpage[] = {
 
  // slots: signature, parameters, type, tag, flags
        9,    8,    8,    8, 0x08,
-      31,    8,    8,    8, 0x08,
-      56,    8,    8,    8, 0x08,
+      16,    8,    8,    8, 0x08,
+      38,    8,    8,    8, 0x08,
+      63,    8,    8,    8, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Addpage[] = {
-    "Addpage\0\0on_pbn_back_clicked()\0"
+    "Addpage\0\0load()\0on_pbn_back_clicked()\0"
     "on_pbn_addName_clicked()\0"
     "on_btn_dbselect_clicked()\0"
 };
@@ -73,12 +74,13 @@ int Addpage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: on_pbn_back_clicked(); break;
-        case 1: on_pbn_addName_clicked(); break;
-        case 2: on_btn_dbselect_clicked(); break;
+        case 0: load(); break;
+        case 1: on_pbn_back_clicked(); break;
+        case 2: on_pbn_addName_clicked(); break;
+        case 3: on_btn_dbselect_clicked(); break;
         default: ;
         }
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }

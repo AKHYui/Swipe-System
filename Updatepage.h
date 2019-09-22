@@ -17,6 +17,8 @@ public:
 
 
 private slots:
+    void load();
+
     void on_updateback_clicked();
 
     void on_btn_dbselect_clicked();

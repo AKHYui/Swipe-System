@@ -18,6 +18,8 @@ public:
 
 
 private slots:
+    void load();
+
     void on_pbn_back_clicked();
 
     void on_pbn_addName_clicked();

@@ -16,9 +16,13 @@ public:
     ~Selectpage();
 
 private slots:
+    void load();
+
     void on_sel_back_clicked();
 
     void on_btn_dbselect_clicked();
+
+    void on_btn_dbrefresh_clicked();
 
 private:
     Ui::Selectpage *ui;

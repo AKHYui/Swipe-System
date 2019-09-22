@@ -17,6 +17,8 @@ public:
 
 
 private slots:
+    void load();
+
     void on_delback_clicked();
 
 

@@ -4,6 +4,7 @@
 #include "QFileDialog"
 #include "ATSysDatabaseControl.h"
 #include "QMessageBox"
+#include <QTableWidgetItem>
 
 Deletepage::Deletepage(QWidget *parent) :
     QWidget(parent),
@@ -18,6 +19,27 @@ Deletepage::~Deletepage()
     delete ui;
 }
 
+//将数据库中信息显示在界面上
+void Deletepage::load()
+{
+    QList<employee_info> list = ATSysDatabaseControl::load();
+    while(ui->db_table->rowCount() > 0)
+        ui->db_table->removeRow(0);
+    for(int i = 0; i < list.count(); i++)
+    {
+        const employee_info &info = list.at(i);
+        ui->db_table->insertRow(i);
+        ui->db_table->setItem(i, 0,
+                              new QTableWidgetItem(QString::number(info.card))
+                              );
+        ui->db_table->setItem(i, 1,
+                              new QTableWidgetItem(info.name));
+        ui->db_table->setItem(i, 2,
+                              new QTableWidgetItem(info.sex));
+        ui->db_table->setItem(i, 3,
+                              new QTableWidgetItem(info.state));
+    }
+}
 
 //返回
 void Deletepage::on_delback_clicked()
@@ -42,6 +64,7 @@ void Deletepage::on_btn_dbselect_clicked()
         {
             ui->ted_dbpath->setText(dbPath);
         }
+    load();
 }
 
 //删除员工信息
@@ -56,5 +79,6 @@ void Deletepage::on_ptn_delete_clicked()
     ATSysDatabaseControl::remove(ui->btn_card->text().toLongLong());
     ui->btn_card->clear();
     ui->btn_name->clear();
+    load();
     QMessageBox::information(this, "information", "OK");
 }

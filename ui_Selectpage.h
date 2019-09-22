@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Selectpage.ui'
 **
-** Created: Tue Sep 10 22:16:44 2019
+** Created: Sun Sep 22 13:28:32 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -31,7 +31,7 @@ class Ui_Selectpage
 public:
     QPushButton *sel_back;
     QLabel *lb_searchtitle;
-    QTableWidget *employee_table;
+    QTableWidget *db_table;
     QGroupBox *groupBox_2;
     QTableWidget *logTable;
     QWidget *layoutWidget;
@@ -59,22 +59,22 @@ public:
         lb_searchtitle = new QLabel(Selectpage);
         lb_searchtitle->setObjectName(QString::fromUtf8("lb_searchtitle"));
         lb_searchtitle->setGeometry(QRect(190, 10, 171, 31));
-        employee_table = new QTableWidget(Selectpage);
-        if (employee_table->columnCount() < 4)
-            employee_table->setColumnCount(4);
+        db_table = new QTableWidget(Selectpage);
+        if (db_table->columnCount() < 4)
+            db_table->setColumnCount(4);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
-        employee_table->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        db_table->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
-        employee_table->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        db_table->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
-        employee_table->setHorizontalHeaderItem(2, __qtablewidgetitem2);
+        db_table->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
-        employee_table->setHorizontalHeaderItem(3, __qtablewidgetitem3);
-        employee_table->setObjectName(QString::fromUtf8("employee_table"));
-        employee_table->setGeometry(QRect(0, 140, 561, 192));
-        employee_table->setEditTriggers(QAbstractItemView::NoEditTriggers);
-        employee_table->setSelectionMode(QAbstractItemView::SingleSelection);
-        employee_table->setSelectionBehavior(QAbstractItemView::SelectRows);
+        db_table->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        db_table->setObjectName(QString::fromUtf8("db_table"));
+        db_table->setGeometry(QRect(0, 140, 561, 192));
+        db_table->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        db_table->setSelectionMode(QAbstractItemView::SingleSelection);
+        db_table->setSelectionBehavior(QAbstractItemView::SelectRows);
         groupBox_2 = new QGroupBox(Selectpage);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         groupBox_2->setGeometry(QRect(10, 340, 551, 231));
@@ -159,13 +159,13 @@ public:
         Selectpage->setWindowTitle(QApplication::translate("Selectpage", "Form", 0, QApplication::UnicodeUTF8));
         sel_back->setText(QApplication::translate("Selectpage", "\350\277\224\345\233\236", 0, QApplication::UnicodeUTF8));
         lb_searchtitle->setText(QApplication::translate("Selectpage", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">\346\237\245\350\257\242\344\277\241\346\201\257\345\271\263\345\217\260</span></p></body></html>", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem = employee_table->horizontalHeaderItem(0);
+        QTableWidgetItem *___qtablewidgetitem = db_table->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("Selectpage", "\345\215\241\345\217\267", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem1 = employee_table->horizontalHeaderItem(1);
+        QTableWidgetItem *___qtablewidgetitem1 = db_table->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QApplication::translate("Selectpage", "\345\247\223\345\220\215", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem2 = employee_table->horizontalHeaderItem(2);
+        QTableWidgetItem *___qtablewidgetitem2 = db_table->horizontalHeaderItem(2);
         ___qtablewidgetitem2->setText(QApplication::translate("Selectpage", "\346\200\247\345\210\253", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem3 = employee_table->horizontalHeaderItem(3);
+        QTableWidgetItem *___qtablewidgetitem3 = db_table->horizontalHeaderItem(3);
         ___qtablewidgetitem3->setText(QApplication::translate("Selectpage", "\347\212\266\346\200\201", 0, QApplication::UnicodeUTF8));
         groupBox_2->setTitle(QApplication::translate("Selectpage", "\350\200\203\345\213\244\346\227\245\345\277\227\350\241\250", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem4 = logTable->horizontalHeaderItem(0);
