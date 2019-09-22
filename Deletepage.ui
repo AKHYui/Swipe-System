@@ -191,7 +191,7 @@
     <string>姓 名：</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="btn_card">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -201,7 +201,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="btn_name">
    <property name="geometry">
     <rect>
      <x>480</x>

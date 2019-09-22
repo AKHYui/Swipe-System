@@ -44,3 +44,17 @@ void Deletepage::on_btn_dbselect_clicked()
         }
 }
 
+//删除员工信息
+void Deletepage::on_ptn_delete_clicked()
+{
+    if(ui->btn_card->text().isEmpty())
+    {
+        QMessageBox::warning(this, "warning", "You must put IDcard!");
+        return;
+    }
+    //删除用户信息
+    ATSysDatabaseControl::remove(ui->btn_card->text().toLongLong());
+    ui->btn_card->clear();
+    ui->btn_name->clear();
+    QMessageBox::information(this, "information", "OK");
+}

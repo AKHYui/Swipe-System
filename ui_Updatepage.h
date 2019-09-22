@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Updatepage.ui'
 **
-** Created: Tue Sep 10 22:16:44 2019
+** Created: Sun Sep 22 12:49:38 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -132,7 +132,7 @@ public:
 
         ted_showNumber = new QLineEdit(layoutWidget_2);
         ted_showNumber->setObjectName(QString::fromUtf8("ted_showNumber"));
-        ted_showNumber->setEnabled(false);
+        ted_showNumber->setEnabled(true);
 
         gridLayout->addWidget(ted_showNumber, 0, 2, 1, 1);
 

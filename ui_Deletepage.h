@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Deletepage.ui'
 **
-** Created: Mon Sep 16 20:15:39 2019
+** Created: Sun Sep 22 12:30:47 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -41,8 +41,8 @@ public:
     QPushButton *pushButton_4;
     QLabel *label_2;
     QLabel *label_3;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QLineEdit *btn_card;
+    QLineEdit *btn_name;
 
     void setupUi(QWidget *Deletepage)
     {
@@ -119,12 +119,12 @@ public:
         label_3 = new QLabel(Deletepage);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(400, 380, 72, 15));
-        lineEdit = new QLineEdit(Deletepage);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(240, 380, 113, 21));
-        lineEdit_2 = new QLineEdit(Deletepage);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(480, 380, 113, 21));
+        btn_card = new QLineEdit(Deletepage);
+        btn_card->setObjectName(QString::fromUtf8("btn_card"));
+        btn_card->setGeometry(QRect(240, 380, 113, 21));
+        btn_name = new QLineEdit(Deletepage);
+        btn_name->setObjectName(QString::fromUtf8("btn_name"));
+        btn_name->setGeometry(QRect(480, 380, 113, 21));
 
         retranslateUi(Deletepage);
 

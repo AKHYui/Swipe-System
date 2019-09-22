@@ -19,6 +19,10 @@ public:
 private slots:
     void on_updateback_clicked();
 
+    void on_btn_dbselect_clicked();
+
+    void on_pbn_addName_clicked();
+
 private:
     Ui::Updatepage *ui;
 };

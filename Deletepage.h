@@ -23,6 +23,8 @@ private slots:
     void on_btn_dbselect_clicked();
 
 
+    void on_ptn_delete_clicked();
+
 private:
     Ui::Deletepage *ui;
 };
