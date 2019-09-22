@@ -82,3 +82,19 @@ void Deletepage::on_ptn_delete_clicked()
     load();
     QMessageBox::information(this, "information", "OK");
 }
+
+//注销功能
+void Deletepage::on_ptn_release_clicked()
+{
+    if(ui->btn_card->text().isEmpty())
+    {
+        QMessageBox::warning(this, "warning", "You must put IDcard!");
+        return;
+    }
+    //注销用户信息
+    ATSysDatabaseControl::cancel(ui->btn_card->text().toLongLong());
+    ui->btn_card->clear();
+    ui->btn_name->clear();
+    load();
+    QMessageBox::information(this, "information", "OK");
+}

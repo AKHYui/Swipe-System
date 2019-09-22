@@ -27,6 +27,8 @@ private slots:
 
     void on_ptn_delete_clicked();
 
+    void on_ptn_release_clicked();
+
 private:
     Ui::Deletepage *ui;
 };

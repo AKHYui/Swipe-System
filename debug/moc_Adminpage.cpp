@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Adminpage.h'
 **
-** Created: Tue Sep 10 22:17:01 2019
+** Created: Sun Sep 22 13:47:55 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Adminpage[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,12 +32,17 @@ static const uint qt_meta_data_Adminpage[] = {
 
  // slots: signature, parameters, type, tag, flags
       11,   10,   10,   10, 0x08,
+      18,   10,   10,   10, 0x08,
+      40,   10,   10,   10, 0x08,
+      66,   10,   10,   10, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Adminpage[] = {
-    "Adminpage\0\0on_pbn_back_clicked()\0"
+    "Adminpage\0\0load()\0on_pbn_back_clicked()\0"
+    "on_btn_dbselect_clicked()\0"
+    "on_btn_dbrefresh_clicked()\0"
 };
 
 const QMetaObject Adminpage::staticMetaObject = {
@@ -69,10 +74,13 @@ int Adminpage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: on_pbn_back_clicked(); break;
+        case 0: load(); break;
+        case 1: on_pbn_back_clicked(); break;
+        case 2: on_btn_dbselect_clicked(); break;
+        case 3: on_btn_dbrefresh_clicked(); break;
         default: ;
         }
-        _id -= 1;
+        _id -= 4;
     }
     return _id;
 }
