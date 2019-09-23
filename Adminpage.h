@@ -16,13 +16,17 @@ public:
     ~Adminpage();
 
 private slots:
-    void load();
+    void manageload();
 
     void on_pbn_back_clicked();
 
     void on_btn_dbselect_clicked();
 
     void on_btn_dbrefresh_clicked();
+
+    void on_pbn_addName_clicked();
+
+    void on_ptn_delete_clicked();
 
 private:
     Ui::Adminpage *ui;
