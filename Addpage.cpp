@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include "QFileDialog"
 #include <QTableWidgetItem>
+#include "QDebug"
 
 Addpage::Addpage(QWidget *parent) :
     QWidget(parent),
@@ -13,6 +14,20 @@ Addpage::Addpage(QWidget *parent) :
 {
     ui->setupUi(this);
     Addpage::setWindowTitle(QString("Add information"));
+    // 选择13.56M读写器
+    RFIDChannelMan::setChannel(RFIDChannelMan::ChannelIEEE14443);
+    // 创建13.56M读写器操作类对象
+    rfid = new IEEE14443Control(this);
+    // 连接出错、寻卡成功以及读卡成功的信号
+    connect(rfid, SIGNAL(error(int,QString)),
+            this, SLOT(on_search_error(int,QString)));
+    connect(rfid, SIGNAL(foundCard(QByteArray)),
+            this, SLOT(on_search_success(QByteArray)));
+    connect(rfid, SIGNAL(dataReaded(int,QByteArray)),
+            this, SLOT(on_ted_showID(int,QByteArray)));
+    //Windows使用第一个，Linux使用第二个
+    rfid->start("COM4");
+    //rfid->start("/dev/ttyUSB0");
 }
 
 Addpage::~Addpage()
@@ -66,7 +81,7 @@ void Addpage::on_pbn_addName_clicked()
     load();
     ui->ted_showNumber->clear();
     ui->ted_showName->clear();
-    ui->ted_showSex->clear();
+    ui->ted_showSex->currentIndex();
     QMessageBox::information(this, "information", "OK");
 }
 
@@ -86,4 +101,57 @@ void Addpage::on_btn_dbselect_clicked()
             ui->ted_dbpath->setText(dbPath);
         }
      load();
+}
+
+/*---------------------------13.56M读卡-----------------*/
+/**
+ * @brief onNewCard
+ * 获取到ID卡时执行的槽函数
+ *
+ * @param decID 由newCard()信号传递过来的卡号
+ * @param byteID 由newCard()信号传递过来的卡号
+ */
+void Addpage::onNewCard(qlonglong decID, const QByteArray &byteID)
+{
+    QList<QTableWidgetItem*> lists =
+            ui->db_table->findItems(QString::number(decID), Qt::MatchExactly);
+    if(!lists.isEmpty())//如果列表中存在对应的卡号信息，则选中表中的信息
+        ui->db_table->selectRow(lists.at(0)->row());
+    ui->ted_showNumber->setFocus();
+}
+
+//------------------------13.56M读卡-----------------------//
+//槽函数，获取卡号失败的函数
+void Addpage::on_search_error(int cmdType, const QString &result)
+{
+
+    if(cmdType == IEEE14443Control::GetCardId)
+//        rfid->getCardId();
+       QMessageBox::information(this, "提示", "读卡错误！");
+}
+void Addpage::on_search_success(const QByteArray &cardid)
+{
+
+    qlonglong decID;
+    bool ok;
+    qDebug()<<"==[on_search_success]==get cardID:"<<cardid.toHex();
+    decID = cardid.toHex().toLongLong(&ok,16);
+    qDebug()<<"====get cardID:"<<QString::number(decID);
+    // 读卡过程中获得卡号，显示卡号
+    ui->ted_showNumber->setText(QString::number(decID));
+    onNewCard(decID,cardid);
+
+}
+
+//读卡完成，显示读取到到数据
+void Addpage::on_ted_showID(int block, const QByteArray &data)
+{
+  QMessageBox::information(this, "提示", data.toHex());
+
+}
+
+void Addpage::on_pbn_start_clicked()
+{
+    // 点击按钮时，启动寻卡操作
+    rfid->getCardId();
 }

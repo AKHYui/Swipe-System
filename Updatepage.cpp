@@ -82,7 +82,7 @@ void Updatepage::on_pbn_addName_clicked()
                                  ui->cb_updateState->currentText());
     ui->ted_showNumber->clear();
     ui->ted_showName->clear();
-    ui->ted_showSex->clear();
+    ui->ted_showSex->currentIndex();
     ui->cb_updateState->clear();
     load();
     QMessageBox::information(this, "information", "OK");

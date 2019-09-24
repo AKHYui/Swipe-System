@@ -24,6 +24,8 @@ private slots:
 
     void on_btn_dbrefresh_clicked();
 
+    void on_pbn_search_clicked();
+
 private:
     Ui::Selectpage *ui;
 };

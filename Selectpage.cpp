@@ -72,3 +72,14 @@ void Selectpage::on_btn_dbrefresh_clicked()
 {
     load();
 }
+
+//查询功能
+void Selectpage::on_pbn_search_clicked()
+{
+    if(ui->ted_showNumber->text().isEmpty())
+    {
+        QMessageBox::warning(this, "warning", "ID is empty");
+        return;
+    }
+    //查询功能实现
+}

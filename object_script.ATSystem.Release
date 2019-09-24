@@ -1,6 +1,9 @@
 INPUT(
 ./release\main.o
 ./release\Login.o
+./release\RFIDChannelMan.o
+./release\IEEE14443Package.o
+./release\IEEE14443Control.o
 ./release\Maincontrol.o
 ./release\Homepage.o
 ./release\Addpage.o
@@ -11,6 +14,8 @@ INPUT(
 ./release\Adminpage.o
 ./release\ATSysDatabaseControl.o
 ./release\moc_Login.o
+./release\moc_RFIDChannelMan.o
+./release\moc_IEEE14443Control.o
 ./release\moc_Maincontrol.o
 ./release\moc_Homepage.o
 ./release\moc_Addpage.o

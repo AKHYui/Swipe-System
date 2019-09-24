@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Selectpage.h'
 **
-** Created: Sun Sep 22 13:32:20 2019
+** Created: Mon Sep 23 16:50:04 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Selectpage[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,6 +35,7 @@ static const uint qt_meta_data_Selectpage[] = {
       19,   11,   11,   11, 0x08,
       41,   11,   11,   11, 0x08,
       67,   11,   11,   11, 0x08,
+      94,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -43,6 +44,7 @@ static const char qt_meta_stringdata_Selectpage[] = {
     "Selectpage\0\0load()\0on_sel_back_clicked()\0"
     "on_btn_dbselect_clicked()\0"
     "on_btn_dbrefresh_clicked()\0"
+    "on_pbn_search_clicked()\0"
 };
 
 const QMetaObject Selectpage::staticMetaObject = {
@@ -78,9 +80,10 @@ int Selectpage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: on_sel_back_clicked(); break;
         case 2: on_btn_dbselect_clicked(); break;
         case 3: on_btn_dbrefresh_clicked(); break;
+        case 4: on_pbn_search_clicked(); break;
         default: ;
         }
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

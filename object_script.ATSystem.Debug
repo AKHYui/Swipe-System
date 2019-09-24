@@ -1,6 +1,9 @@
 INPUT(
 ./debug\main.o
 ./debug\Login.o
+./debug\RFIDChannelMan.o
+./debug\IEEE14443Package.o
+./debug\IEEE14443Control.o
 ./debug\Maincontrol.o
 ./debug\Homepage.o
 ./debug\Addpage.o
@@ -11,6 +14,8 @@ INPUT(
 ./debug\Adminpage.o
 ./debug\ATSysDatabaseControl.o
 ./debug\moc_Login.o
+./debug\moc_RFIDChannelMan.o
+./debug\moc_IEEE14443Control.o
 ./debug\moc_Maincontrol.o
 ./debug\moc_Homepage.o
 ./debug\moc_Addpage.o
