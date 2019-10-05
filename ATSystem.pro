@@ -61,13 +61,12 @@ FORMS    += Login.ui \
     Adminlogin.ui \
     Adminpage.ui
 
-
-
 #LIBS +=  \
 #    -lqextserialport
 
 RESOURCES += \
     resource.qrc
+
 INCLUDEPATH +=  \
     ../ATSystem/qextserialport/include \
     ../ATSystem/QRFID

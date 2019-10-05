@@ -70,15 +70,17 @@ void Deletepage::on_btn_dbselect_clicked()
 //删除员工信息
 void Deletepage::on_ptn_delete_clicked()
 {
-    if(ui->btn_card->text().isEmpty())
+    QList<QTableWidgetItem *> sel = ui->db_table->selectedItems();
+    if(sel.isEmpty())
     {
-        QMessageBox::warning(this, "warning", "You must put IDcard!");
+        QMessageBox::warning(this, "警告", "没有选择任何信息");
         return;
     }
     //删除用户信息
-    ATSysDatabaseControl::remove(ui->btn_card->text().toLongLong());
-    ui->btn_card->clear();
-    ui->btn_name->clear();
+    int row = sel[0]->row();
+    qlonglong card = ui->db_table->item(row, 0)->text().toLongLong();
+    ATSysDatabaseControl::remove(card);
+    ui->db_table->removeRow(row);
     load();
     QMessageBox::information(this, "information", "OK");
 }
@@ -86,15 +88,16 @@ void Deletepage::on_ptn_delete_clicked()
 //注销功能
 void Deletepage::on_ptn_release_clicked()
 {
-    if(ui->btn_card->text().isEmpty())
+    QList<QTableWidgetItem *> sel = ui->db_table->selectedItems();
+    if(sel.isEmpty())
     {
-        QMessageBox::warning(this, "warning", "You must put IDcard!");
+        QMessageBox::warning(this, "警告", "没有选择任何信息");
         return;
     }
     //注销用户信息
-    ATSysDatabaseControl::cancel(ui->btn_card->text().toLongLong());
-    ui->btn_card->clear();
-    ui->btn_name->clear();
+    int row = sel[0]->row();
+    qlonglong card = ui->db_table->item(row, 0)->text().toLongLong();
+    ATSysDatabaseControl::cancel(card);
     load();
     QMessageBox::information(this, "information", "OK");
 }

@@ -19,6 +19,8 @@ Addpage::Addpage(QWidget *parent) :
     // 创建13.56M读写器操作类对象
     rfid = new IEEE14443Control(this);
     // 连接出错、寻卡成功以及读卡成功的信号
+    //connect系统函数，连接信号和槽的桥梁
+    //只要触发rfid对象中的error信号(只去掉用)，系统会自动执行this中的on_search_error函数，可以开发
     connect(rfid, SIGNAL(error(int,QString)),
             this, SLOT(on_search_error(int,QString)));
     connect(rfid, SIGNAL(foundCard(QByteArray)),
@@ -26,8 +28,8 @@ Addpage::Addpage(QWidget *parent) :
     connect(rfid, SIGNAL(dataReaded(int,QByteArray)),
             this, SLOT(on_ted_showID(int,QByteArray)));
     //Windows使用第一个，Linux使用第二个
-    rfid->start("COM4");
-    //rfid->start("/dev/ttyUSB0");
+    //rfid->start("COM4");
+    rfid->start("/dev/ttyUSB0");
 }
 
 Addpage::~Addpage()
@@ -126,6 +128,7 @@ void Addpage::on_search_error(int cmdType, const QString &result)
 {
 
     if(cmdType == IEEE14443Control::GetCardId)
+        //获取卡号的时候炸了
 //        rfid->getCardId();
        QMessageBox::information(this, "提示", "读卡错误！");
 }
