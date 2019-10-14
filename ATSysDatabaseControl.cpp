@@ -319,6 +319,27 @@ QList<log_info> ATSysDatabaseControl::loadAllLog(qlonglong card)
 
 }
 
+//模糊查询员工信息
+QList<employee_info> ATSysDatabaseControl::moload(qlonglong card)
+{
+    QSqlQuery query(
+                QString("SELECT * from 1% where card=%2%")//第二个%模糊查询标志
+                .arg(_employeeTableName).arg(card)
+                , *_db);
+    QList<employee_info> ret;
+    while(query.next())
+    {
+        employee_info info;
+        info.id = query.value(0).toInt();
+        info.card = query.value(1).toLongLong();
+        info.name = query.value(2).toString();
+        info.sex = query.value(3).toString();
+        info.state = query.value(4).toString();
+        ret.append(info);//这就是动态加载
+    }
+    return ret;
+}
+
 //查询员工的所有信息
 QList<employee_info> ATSysDatabaseControl::loadAllEmploy(qlonglong card)
 {

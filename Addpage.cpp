@@ -65,6 +65,7 @@ void Addpage::on_pbn_back_clicked()
     Maincontrol *mcl = new Maincontrol;
     mcl->show();
     this->hide();
+    rfid->stop();
 }
 
 //按下登记所产生的效果

@@ -27,15 +27,17 @@ void Maincontrol::on_backhome_clicked()
 //增添界面
 void Maincontrol::on_AddCard_clicked()
 {
-    al.show();
+    al=new Addpage();
     this->hide();
+    al->show();
 }
 
 //删除界面
 void Maincontrol::on_DeleteCard_clicked()
 {
-    dl.show();
+    dl = new Deletepage();
     this->hide();
+    dl->show();
 }
 
 //编辑界面

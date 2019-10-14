@@ -111,6 +111,7 @@ public:
 //    static QList<log_info> loadAllLog(qlonglong card);//查询考勤日志的所有信息
     static QList<log_info> loadAllLog(qlonglong card);
     static QList<employee_info> loadAllEmploy(qlonglong card);//查询员工的所有信息
+    static QList<employee_info> moload(qlonglong card);//查询员工的所有信息
     static void checkIn(qlonglong card, const QString &name);
 
 private:

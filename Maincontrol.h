@@ -40,8 +40,8 @@ private slots:
 private:
     Ui::Maincontrol *ui;
     Homepage hl;
-    Addpage al;
-    Deletepage dl;
+    Addpage *al;
+    Deletepage *dl;
     Updatepage ul;
     Selectpage sl;
     Adminlogin an;
