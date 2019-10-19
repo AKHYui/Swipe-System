@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Updatepage.h'
 **
-** Created: Sun Sep 22 13:24:26 2019
+** Created: Sat Oct 19 13:48:53 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Updatepage[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,6 +35,11 @@ static const uint qt_meta_data_Updatepage[] = {
       19,   11,   11,   11, 0x08,
       43,   11,   11,   11, 0x08,
       69,   11,   11,   11, 0x08,
+      94,   11,   11,   11, 0x08,
+     123,  117,   11,   11, 0x08,
+     159,  144,   11,   11, 0x08,
+     195,  188,   11,   11, 0x08,
+     236,  225,   11,   11, 0x08,
 
        0        // eod
 };
@@ -43,6 +48,11 @@ static const char qt_meta_stringdata_Updatepage[] = {
     "Updatepage\0\0load()\0on_updateback_clicked()\0"
     "on_btn_dbselect_clicked()\0"
     "on_pbn_addName_clicked()\0"
+    "on_pbn_start_clicked()\0decID\0"
+    "onNewCard(qlonglong)\0cmdType,result\0"
+    "on_search_error(int,QString)\0cardid\0"
+    "on_search_success(QByteArray)\0block,data\0"
+    "on_ted_showID(int,QByteArray)\0"
 };
 
 const QMetaObject Updatepage::staticMetaObject = {
@@ -78,9 +88,14 @@ int Updatepage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: on_updateback_clicked(); break;
         case 2: on_btn_dbselect_clicked(); break;
         case 3: on_pbn_addName_clicked(); break;
+        case 4: on_pbn_start_clicked(); break;
+        case 5: onNewCard((*reinterpret_cast< qlonglong(*)>(_a[1]))); break;
+        case 6: on_search_error((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 7: on_search_success((*reinterpret_cast< const QByteArray(*)>(_a[1]))); break;
+        case 8: on_ted_showID((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const QByteArray(*)>(_a[2]))); break;
         default: ;
         }
-        _id -= 4;
+        _id -= 9;
     }
     return _id;
 }

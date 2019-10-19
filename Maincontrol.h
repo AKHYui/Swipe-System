@@ -39,10 +39,10 @@ private slots:
 
 private:
     Ui::Maincontrol *ui;
-    Homepage hl;
+    Homepage *hl;
     Addpage *al;
     Deletepage *dl;
-    Updatepage ul;
+    Updatepage *ul;
     Selectpage sl;
     Adminlogin an;
 };

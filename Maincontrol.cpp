@@ -20,8 +20,9 @@ Maincontrol::~Maincontrol()
 //返回主页面
 void Maincontrol::on_backhome_clicked()
 {
-    hl.show();
+    hl=new Homepage();
     this->hide();
+    hl->show();
 }
 
 //增添界面
@@ -43,8 +44,9 @@ void Maincontrol::on_DeleteCard_clicked()
 //编辑界面
 void Maincontrol::on_UpdateCard_clicked()
 {
-    ul.show();
+    ul = new Updatepage();
     this->hide();
+    ul->show();
 }
 
 //登出

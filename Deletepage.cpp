@@ -29,7 +29,7 @@ Deletepage::Deletepage(QWidget *parent) :
     connect(rfid, SIGNAL(dataReaded(int,QByteArray)),
             this, SLOT(on_ted_showID(int,QByteArray)));
 
-     //rfid->start("COM6");
+//     rfid->start("COM4");
     rfid->start("/dev/ttyUSB0");
 }
 

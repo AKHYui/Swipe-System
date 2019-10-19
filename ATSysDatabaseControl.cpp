@@ -94,8 +94,8 @@ bool ATSysDatabaseControl::setDatabase(QString path)
 QString ATSysDatabaseControl::setNewDatabase()
 {
     //获取数据库路径，在项目的debug文件中
-     qDebug()<<"db card:"<<QCoreApplication::applicationDirPath() + "/ATSystem.db";
-    return QCoreApplication::applicationDirPath() + "/ATSystem.db";
+     qDebug()<<"db card:"<<QCoreApplication::applicationDirPath() + "/dbSystem.db";
+    return QCoreApplication::applicationDirPath() + "/dbSystem.db";
 }
 
 //加载所有管理员的信息，然后存到泛型的ret变量中
