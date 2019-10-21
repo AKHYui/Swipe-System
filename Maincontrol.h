@@ -43,8 +43,8 @@ private:
     Addpage *al;
     Deletepage *dl;
     Updatepage *ul;
-    Selectpage sl;
-    Adminlogin an;
+    Selectpage *sl;
+    Adminlogin *an;
 };
 
 #endif // MAINCONTROL_H

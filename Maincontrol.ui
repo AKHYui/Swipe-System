@@ -31,14 +31,14 @@
    <widget class="QPushButton" name="backhome">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>20</y>
-      <width>101</width>
-      <height>31</height>
+      <x>20</x>
+      <y>80</y>
+      <width>91</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>返回打卡界面</string>
+     <string>首页</string>
     </property>
    </widget>
    <widget class="QPushButton" name="DeleteCard">
@@ -110,7 +110,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
+      <y>40</y>
       <width>91</width>
       <height>31</height>
      </rect>

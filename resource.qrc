@@ -3,5 +3,6 @@
         <file>img/home.png</file>
         <file>img/main.png</file>
         <file>img/adminlogin.png</file>
+        <file>img/addpage.png</file>
     </qresource>
 </RCC>

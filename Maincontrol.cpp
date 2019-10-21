@@ -60,13 +60,15 @@ void Maincontrol::on_back_clicked()
 //查找界面
 void Maincontrol::on_SelectCard_clicked()
 {
-    sl.show();
+    sl = new Selectpage();
     this->hide();
+    sl->show();
 }
 
 //登录管理信息
 void Maincontrol::on_AdminCard_clicked()
 {
-    an.show();
+    an = new Adminlogin();
     this->hide();
+    an->show();
 }

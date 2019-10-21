@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Adminpage.ui'
 **
-** Created: Sun Sep 22 13:47:44 2019
+** Created: Mon Oct 21 17:15:18 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -32,6 +32,7 @@ QT_BEGIN_NAMESPACE
 class Ui_Adminpage
 {
 public:
+    QWidget *widget;
     QWidget *layoutWidget;
     QHBoxLayout *Function;
     QSpacerItem *horizontalSpacer_2;
@@ -39,13 +40,12 @@ public:
     QSpacerItem *horizontalSpacer;
     QPushButton *ptn_delete;
     QSpacerItem *horizontalSpacer_3;
-    QWidget *layoutWidget_5;
-    QHBoxLayout *horizontalLayout_2;
-    QPushButton *pbn_back;
-    QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer_4;
-    QLabel *lb_sysName;
-    QSpacerItem *horizontalSpacer_5;
+    QWidget *layoutWidget_2;
+    QHBoxLayout *db_select;
+    QLabel *lb_db;
+    QLineEdit *ted_dbpath;
+    QPushButton *btn_dbselect;
+    QPushButton *btn_dbrefresh;
     QTableWidget *db_table;
     QSplitter *splitter;
     QPushButton *pbn_start;
@@ -61,21 +61,21 @@ public:
     QLineEdit *ted_showPassword;
     QLabel *lb_cardSex;
     QComboBox *ted_showSex;
-    QWidget *layoutWidget_2;
-    QHBoxLayout *db_select;
-    QLabel *lb_db;
-    QLineEdit *ted_dbpath;
-    QPushButton *btn_dbselect;
-    QPushButton *btn_dbrefresh;
+    QPushButton *pbn_back;
+    QLabel *label;
 
     void setupUi(QWidget *Adminpage)
     {
         if (Adminpage->objectName().isEmpty())
             Adminpage->setObjectName(QString::fromUtf8("Adminpage"));
-        Adminpage->resize(670, 436);
-        layoutWidget = new QWidget(Adminpage);
+        Adminpage->resize(735, 508);
+        widget = new QWidget(Adminpage);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(0, 0, 741, 511));
+        widget->setStyleSheet(QString::fromUtf8("#widget{background-image: url(:/new/prefix1/img/addpage.png);}"));
+        layoutWidget = new QWidget(widget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(0, 390, 661, 30));
+        layoutWidget->setGeometry(QRect(30, 370, 661, 30));
         Function = new QHBoxLayout(layoutWidget);
         Function->setObjectName(QString::fromUtf8("Function"));
         Function->setContentsMargins(0, 0, 0, 0);
@@ -101,36 +101,35 @@ public:
 
         Function->addItem(horizontalSpacer_3);
 
-        layoutWidget_5 = new QWidget(Adminpage);
-        layoutWidget_5->setObjectName(QString::fromUtf8("layoutWidget_5"));
-        layoutWidget_5->setGeometry(QRect(0, 0, 651, 51));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget_5);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        pbn_back = new QPushButton(layoutWidget_5);
-        pbn_back->setObjectName(QString::fromUtf8("pbn_back"));
+        layoutWidget_2 = new QWidget(widget);
+        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
+        layoutWidget_2->setGeometry(QRect(40, 100, 651, 30));
+        db_select = new QHBoxLayout(layoutWidget_2);
+        db_select->setObjectName(QString::fromUtf8("db_select"));
+        db_select->setContentsMargins(0, 0, 0, 0);
+        lb_db = new QLabel(layoutWidget_2);
+        lb_db->setObjectName(QString::fromUtf8("lb_db"));
 
-        horizontalLayout_2->addWidget(pbn_back);
+        db_select->addWidget(lb_db);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalSpacer_4 = new QSpacerItem(90, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+        ted_dbpath = new QLineEdit(layoutWidget_2);
+        ted_dbpath->setObjectName(QString::fromUtf8("ted_dbpath"));
+        ted_dbpath->setMinimumSize(QSize(0, 25));
+        ted_dbpath->setReadOnly(true);
 
-        horizontalLayout->addItem(horizontalSpacer_4);
+        db_select->addWidget(ted_dbpath);
 
-        lb_sysName = new QLabel(layoutWidget_5);
-        lb_sysName->setObjectName(QString::fromUtf8("lb_sysName"));
+        btn_dbselect = new QPushButton(layoutWidget_2);
+        btn_dbselect->setObjectName(QString::fromUtf8("btn_dbselect"));
 
-        horizontalLayout->addWidget(lb_sysName);
+        db_select->addWidget(btn_dbselect);
 
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        btn_dbrefresh = new QPushButton(layoutWidget_2);
+        btn_dbrefresh->setObjectName(QString::fromUtf8("btn_dbrefresh"));
 
-        horizontalLayout->addItem(horizontalSpacer_5);
+        db_select->addWidget(btn_dbrefresh);
 
-
-        horizontalLayout_2->addLayout(horizontalLayout);
-
-        db_table = new QTableWidget(Adminpage);
+        db_table = new QTableWidget(widget);
         if (db_table->columnCount() < 6)
             db_table->setColumnCount(6);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
@@ -146,13 +145,13 @@ public:
         QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
         db_table->setHorizontalHeaderItem(5, __qtablewidgetitem5);
         db_table->setObjectName(QString::fromUtf8("db_table"));
-        db_table->setGeometry(QRect(0, 100, 651, 161));
+        db_table->setGeometry(QRect(40, 140, 651, 161));
         db_table->setEditTriggers(QAbstractItemView::NoEditTriggers);
         db_table->setSelectionMode(QAbstractItemView::SingleSelection);
         db_table->setSelectionBehavior(QAbstractItemView::SelectRows);
-        splitter = new QSplitter(Adminpage);
+        splitter = new QSplitter(widget);
         splitter->setObjectName(QString::fromUtf8("splitter"));
-        splitter->setGeometry(QRect(10, 290, 651, 61));
+        splitter->setGeometry(QRect(40, 300, 651, 61));
         splitter->setOrientation(Qt::Horizontal);
         pbn_start = new QPushButton(splitter);
         pbn_start->setObjectName(QString::fromUtf8("pbn_start"));
@@ -223,34 +222,12 @@ public:
         formLayout->setWidget(1, QFormLayout::FieldRole, ted_showSex);
 
         splitter->addWidget(layoutWidget_4);
-        layoutWidget_2 = new QWidget(Adminpage);
-        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(0, 60, 651, 30));
-        db_select = new QHBoxLayout(layoutWidget_2);
-        db_select->setObjectName(QString::fromUtf8("db_select"));
-        db_select->setContentsMargins(0, 0, 0, 0);
-        lb_db = new QLabel(layoutWidget_2);
-        lb_db->setObjectName(QString::fromUtf8("lb_db"));
-
-        db_select->addWidget(lb_db);
-
-        ted_dbpath = new QLineEdit(layoutWidget_2);
-        ted_dbpath->setObjectName(QString::fromUtf8("ted_dbpath"));
-        ted_dbpath->setMinimumSize(QSize(0, 25));
-        ted_dbpath->setReadOnly(true);
-
-        db_select->addWidget(ted_dbpath);
-
-        btn_dbselect = new QPushButton(layoutWidget_2);
-        btn_dbselect->setObjectName(QString::fromUtf8("btn_dbselect"));
-
-        db_select->addWidget(btn_dbselect);
-
-        btn_dbrefresh = new QPushButton(layoutWidget_2);
-        btn_dbrefresh->setObjectName(QString::fromUtf8("btn_dbrefresh"));
-
-        db_select->addWidget(btn_dbrefresh);
-
+        pbn_back = new QPushButton(widget);
+        pbn_back->setObjectName(QString::fromUtf8("pbn_back"));
+        pbn_back->setGeometry(QRect(10, 40, 93, 28));
+        label = new QLabel(widget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(190, 40, 381, 51));
 
         retranslateUi(Adminpage);
 
@@ -262,8 +239,9 @@ public:
         Adminpage->setWindowTitle(QApplication::translate("Adminpage", "Form", 0, QApplication::UnicodeUTF8));
         pbn_addName->setText(QApplication::translate("Adminpage", "\346\267\273\345\212\240", 0, QApplication::UnicodeUTF8));
         ptn_delete->setText(QApplication::translate("Adminpage", "\345\210\240\351\231\244", 0, QApplication::UnicodeUTF8));
-        pbn_back->setText(QApplication::translate("Adminpage", "\350\277\224\345\233\236", 0, QApplication::UnicodeUTF8));
-        lb_sysName->setText(QApplication::translate("Adminpage", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">\350\200\203\345\213\244\347\263\273\347\273\237\347\256\241\347\220\206\345\221\230\347\256\241\347\220\206\345\271\263\345\217\260</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        lb_db->setText(QApplication::translate("Adminpage", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\346\225\260\346\215\256\345\272\223</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        btn_dbselect->setText(QApplication::translate("Adminpage", "\351\200\211\346\213\251", 0, QApplication::UnicodeUTF8));
+        btn_dbrefresh->setText(QApplication::translate("Adminpage", "\345\210\267\346\226\260", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem = db_table->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("Adminpage", "ID", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem1 = db_table->horizontalHeaderItem(1);
@@ -288,9 +266,8 @@ public:
          << QApplication::translate("Adminpage", "\347\224\267", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("Adminpage", "\345\245\263", 0, QApplication::UnicodeUTF8)
         );
-        lb_db->setText(QApplication::translate("Adminpage", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">\346\225\260\346\215\256\345\272\223</span></p></body></html>", 0, QApplication::UnicodeUTF8));
-        btn_dbselect->setText(QApplication::translate("Adminpage", "\351\200\211\346\213\251", 0, QApplication::UnicodeUTF8));
-        btn_dbrefresh->setText(QApplication::translate("Adminpage", "\345\210\267\346\226\260", 0, QApplication::UnicodeUTF8));
+        pbn_back->setText(QApplication::translate("Adminpage", "\350\277\224\345\233\236", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("Adminpage", "<html><head/><body><p><span style=\" font-size:20pt; font-weight:600;\">\350\200\203\345\213\244\347\263\273\347\273\237\347\256\241\347\220\206\345\221\230\347\256\241\347\220\206\345\271\263\345\217\260</span></p></body></html>", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

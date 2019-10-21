@@ -28,7 +28,7 @@ Addpage::Addpage(QWidget *parent) :
     connect(rfid, SIGNAL(dataReaded(int,QByteArray)),
             this, SLOT(on_ted_showID(int,QByteArray)));
     //Windows使用第一个，Linux使用第二个
-//    rfid->start("COM4");
+    //rfid->start("COM4");
     rfid->start("/dev/ttyUSB0");
 }
 

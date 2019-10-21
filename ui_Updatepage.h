@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Updatepage.ui'
 **
-** Created: Sun Sep 22 12:49:38 2019
+** Created: Mon Oct 21 16:29:28 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -29,8 +29,9 @@ QT_BEGIN_NAMESPACE
 class Ui_Updatepage
 {
 public:
-    QPushButton *updateback;
+    QWidget *widget;
     QLabel *label;
+    QPushButton *updateback;
     QWidget *layoutWidget;
     QHBoxLayout *db_select;
     QLabel *lb_db;
@@ -56,19 +57,23 @@ public:
         if (Updatepage->objectName().isEmpty())
             Updatepage->setObjectName(QString::fromUtf8("Updatepage"));
         Updatepage->resize(696, 421);
-        updateback = new QPushButton(Updatepage);
-        updateback->setObjectName(QString::fromUtf8("updateback"));
-        updateback->setGeometry(QRect(10, 10, 93, 28));
-        label = new QLabel(Updatepage);
+        widget = new QWidget(Updatepage);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(0, 0, 701, 421));
+        widget->setStyleSheet(QString::fromUtf8("#widget{background-image: url(:/new/prefix1/img/addpage.png);}"));
+        label = new QLabel(widget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(270, 0, 161, 51));
+        label->setGeometry(QRect(250, 30, 201, 51));
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font.setPointSize(16);
         label->setFont(font);
-        layoutWidget = new QWidget(Updatepage);
+        updateback = new QPushButton(widget);
+        updateback->setObjectName(QString::fromUtf8("updateback"));
+        updateback->setGeometry(QRect(10, 40, 93, 28));
+        layoutWidget = new QWidget(widget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(50, 60, 631, 30));
+        layoutWidget->setGeometry(QRect(40, 90, 631, 30));
         db_select = new QHBoxLayout(layoutWidget);
         db_select->setObjectName(QString::fromUtf8("db_select"));
         db_select->setContentsMargins(0, 0, 0, 0);
@@ -93,7 +98,7 @@ public:
 
         db_select->addWidget(btn_dbrefresh);
 
-        db_table = new QTableWidget(Updatepage);
+        db_table = new QTableWidget(widget);
         if (db_table->columnCount() < 4)
             db_table->setColumnCount(4);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
@@ -105,13 +110,13 @@ public:
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
         db_table->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         db_table->setObjectName(QString::fromUtf8("db_table"));
-        db_table->setGeometry(QRect(50, 110, 631, 161));
+        db_table->setGeometry(QRect(40, 140, 631, 161));
         db_table->setEditTriggers(QAbstractItemView::NoEditTriggers);
         db_table->setSelectionMode(QAbstractItemView::SingleSelection);
         db_table->setSelectionBehavior(QAbstractItemView::SelectRows);
-        layoutWidget_2 = new QWidget(Updatepage);
+        layoutWidget_2 = new QWidget(widget);
         layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(50, 290, 631, 101));
+        layoutWidget_2->setGeometry(QRect(40, 310, 631, 101));
         gridLayout = new QGridLayout(layoutWidget_2);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
@@ -183,8 +188,8 @@ public:
     void retranslateUi(QWidget *Updatepage)
     {
         Updatepage->setWindowTitle(QApplication::translate("Updatepage", "Form", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("Updatepage", "<html><head/><body><p><span style=\" font-size:20pt; font-weight:600;\">\347\274\226\350\276\221\344\277\241\346\201\257\345\271\263\345\217\260</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         updateback->setText(QApplication::translate("Updatepage", "\350\277\224\345\233\236", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("Updatepage", "\347\274\226\350\276\221\344\277\241\346\201\257\345\271\263\345\217\260", 0, QApplication::UnicodeUTF8));
         lb_db->setText(QApplication::translate("Updatepage", "<html><head/><body><p align=\"right\"><span style=\" font-size:10pt; font-weight:600;\">\346\225\260\346\215\256\345\272\223</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         btn_dbselect->setText(QApplication::translate("Updatepage", "\351\200\211\346\213\251", 0, QApplication::UnicodeUTF8));
         btn_dbrefresh->setText(QApplication::translate("Updatepage", "\345\210\267\346\226\260", 0, QApplication::UnicodeUTF8));

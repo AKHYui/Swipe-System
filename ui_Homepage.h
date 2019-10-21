@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Homepage.ui'
 **
-** Created: Sat Oct 19 15:36:32 2019
+** Created: Mon Oct 21 16:16:27 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -44,17 +44,17 @@ public:
     {
         if (Homepage->objectName().isEmpty())
             Homepage->setObjectName(QString::fromUtf8("Homepage"));
-        Homepage->resize(692, 453);
+        Homepage->resize(679, 420);
         widget = new QWidget(Homepage);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(0, 0, 691, 461));
+        widget->setGeometry(QRect(0, -10, 691, 431));
         widget->setStyleSheet(QString::fromUtf8("#widget{image: url(:/new/prefix1/img/home.png);}"));
         pushButton_2 = new QPushButton(widget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(10, 50, 91, 71));
+        pushButton_2->setGeometry(QRect(10, 60, 91, 71));
         ctrl = new QPushButton(widget);
         ctrl->setObjectName(QString::fromUtf8("ctrl"));
-        ctrl->setGeometry(QRect(10, 10, 91, 31));
+        ctrl->setGeometry(QRect(10, 140, 91, 31));
         layoutWidget = new QWidget(widget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(60, 340, 571, 62));
@@ -99,7 +99,7 @@ public:
 
         lcdNumber = new QLCDNumber(widget);
         lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
-        lcdNumber->setGeometry(QRect(50, 200, 621, 101));
+        lcdNumber->setGeometry(QRect(160, 200, 351, 101));
         date = new QLabel(widget);
         date->setObjectName(QString::fromUtf8("date"));
         date->setGeometry(QRect(170, 130, 421, 41));

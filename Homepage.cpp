@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QTimer>
 #include <QTime>
+#include "Login.h"
 //#include <QDateTime>
 
 Homepage::Homepage(QWidget *parent) :
@@ -43,7 +44,7 @@ Homepage::Homepage(QWidget *parent) :
 
     rfid->start("/dev/ttyUSB0");
 
-//    rfid->start("COM4");
+    //rfid->start("COM4");
 
 
 
@@ -64,6 +65,8 @@ Homepage::~Homepage()
 void Homepage::onNewCard(qlonglong decID, const QByteArray &byteID)
 {
     employee_info info = ATSysDatabaseControl::load(decID);
+    qDebug()<<"card:"<<QString::number(decID);
+    qDebug()<<"id:"<<QString::number(info.id);
     if(info.id > 0 && info.state == "正常" )
     {
         showTip("欢迎你 " + info.name, true);
@@ -130,12 +133,11 @@ void  Homepage::hideTip()
 //fanhui
 void Homepage::on_ctrl_clicked()
 {
-    Maincontrol *mcl = new Maincontrol();
+    Login *mcl = new Login();
     mcl->show();
     this->hide();
     rfid->stop();
 }
-
 
 
 
@@ -147,8 +149,8 @@ void Homepage::on_search_error(int cmdType, const QString &result)
 {
 
     if(cmdType == IEEE14443Control::GetCardId)
- qDebug()<<"==[on_search_success]";
-        QMessageBox::information(this, "提示", "读卡错误！");
+        qDebug()<<"==[on_search_success]";
+    QMessageBox::information(this, "提示", "读卡错误！");
 }
 void Homepage::on_search_success(const QByteArray &cardid)
 {
@@ -171,8 +173,6 @@ void Homepage::on_show_data(int block, const QByteArray &data)
     QMessageBox::information(this, "提示", data.toHex());
 }
 
-
-
 //daka
 void Homepage::on_pushButton_2_clicked()
 {
@@ -181,7 +181,7 @@ void Homepage::on_pushButton_2_clicked()
     {
         // 点击按钮时，启动寻卡操作
         rfid->getCardId();
-         qDebug()<<"punsh button";
+        qDebug()<<"punsh button";
     }
     else
     {

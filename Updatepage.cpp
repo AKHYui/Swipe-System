@@ -27,7 +27,7 @@ Updatepage::Updatepage(QWidget *parent) :
             this, SLOT(on_ted_showID(int,QByteArray)));
 
 //    rfid->start(RFIDChannelMan::getRfidPort());
-//    rfid->start("COM4");
+    //rfid->start("COM4");
      rfid->start("/dev/ttyUSB0");
 }
 
@@ -101,7 +101,7 @@ void Updatepage::on_pbn_addName_clicked()
     ui->ted_showNumber->clear();
     ui->ted_showName->clear();
     ui->ted_showSex->currentIndex();
-    ui->cb_updateState->clear();
+    ui->cb_updateState->currentIndex();
     load();
     QMessageBox::information(this, "information", "OK");
 }

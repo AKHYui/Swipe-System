@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Adminpage.h'
 **
-** Created: Tue Sep 24 10:09:26 2019
+** Created: Mon Oct 21 16:13:34 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Adminpage[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,21 +32,31 @@ static const uint qt_meta_data_Adminpage[] = {
 
  // slots: signature, parameters, type, tag, flags
       11,   10,   10,   10, 0x08,
-      24,   10,   10,   10, 0x08,
-      46,   10,   10,   10, 0x08,
-      72,   10,   10,   10, 0x08,
-      99,   10,   10,   10, 0x08,
-     124,   10,   10,   10, 0x08,
+      18,   10,   10,   10, 0x08,
+      40,   10,   10,   10, 0x08,
+      66,   10,   10,   10, 0x08,
+      93,   10,   10,   10, 0x08,
+     118,   10,   10,   10, 0x08,
+     148,  142,   10,   10, 0x08,
+     180,  165,   10,   10, 0x08,
+     216,  209,   10,   10, 0x08,
+     257,  246,   10,   10, 0x08,
+     287,   10,   10,   10, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Adminpage[] = {
-    "Adminpage\0\0manageload()\0on_pbn_back_clicked()\0"
+    "Adminpage\0\0load()\0on_pbn_back_clicked()\0"
     "on_btn_dbselect_clicked()\0"
     "on_btn_dbrefresh_clicked()\0"
     "on_pbn_addName_clicked()\0"
-    "on_ptn_delete_clicked()\0"
+    "on_ptn_delete_clicked()\0decID\0"
+    "onNewCard(ulong)\0cmdType,result\0"
+    "on_search_error(int,QString)\0cardid\0"
+    "on_search_success(QByteArray)\0block,data\0"
+    "on_ted_showID(int,QByteArray)\0"
+    "on_pbn_start_clicked()\0"
 };
 
 const QMetaObject Adminpage::staticMetaObject = {
@@ -78,15 +88,20 @@ int Adminpage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: manageload(); break;
+        case 0: load(); break;
         case 1: on_pbn_back_clicked(); break;
         case 2: on_btn_dbselect_clicked(); break;
         case 3: on_btn_dbrefresh_clicked(); break;
         case 4: on_pbn_addName_clicked(); break;
         case 5: on_ptn_delete_clicked(); break;
+        case 6: onNewCard((*reinterpret_cast< ulong(*)>(_a[1]))); break;
+        case 7: on_search_error((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 8: on_search_success((*reinterpret_cast< const QByteArray(*)>(_a[1]))); break;
+        case 9: on_ted_showID((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const QByteArray(*)>(_a[2]))); break;
+        case 10: on_pbn_start_clicked(); break;
         default: ;
         }
-        _id -= 6;
+        _id -= 11;
     }
     return _id;
 }

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>692</width>
-    <height>453</height>
+    <width>679</width>
+    <height>420</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>-10</y>
      <width>691</width>
-     <height>461</height>
+     <height>431</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -29,7 +29,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
+      <y>60</y>
       <width>91</width>
       <height>71</height>
      </rect>
@@ -42,7 +42,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>140</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -156,9 +156,9 @@ border-radius: 30px;</string>
    <widget class="QLCDNumber" name="lcdNumber">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>160</x>
       <y>200</y>
-      <width>621</width>
+      <width>351</width>
       <height>101</height>
      </rect>
     </property>

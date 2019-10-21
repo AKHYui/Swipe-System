@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Adminlogin.ui'
 **
-** Created: Thu Sep 12 19:51:33 2019
+** Created: Mon Oct 21 16:29:28 2019
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -28,24 +28,12 @@ QT_BEGIN_NAMESPACE
 class Ui_Adminlogin
 {
 public:
+    QWidget *widget;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QLabel *lb_login;
     QSpacerItem *horizontalSpacer_4;
-    QWidget *widget;
-    QWidget *layoutWidget_2;
-    QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
-    QLabel *label;
-    QSpacerItem *horizontalSpacer_2;
-    QWidget *layoutWidget_3;
-    QHBoxLayout *horizontalLayout_4;
-    QSpacerItem *horizontalSpacer_7;
-    QPushButton *ptn_login;
-    QSpacerItem *horizontalSpacer_9;
-    QPushButton *ptn_reset;
-    QSpacerItem *horizontalSpacer_8;
     QWidget *layoutWidget_4;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_5;
@@ -55,16 +43,33 @@ public:
     QLabel *lb_pwd;
     QLineEdit *pwd;
     QSpacerItem *horizontalSpacer_6;
+    QWidget *layoutWidget_3;
+    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer_7;
+    QPushButton *ptn_login;
+    QSpacerItem *horizontalSpacer_9;
+    QPushButton *ptn_reset;
+    QSpacerItem *horizontalSpacer_8;
+    QWidget *widget_2;
+    QWidget *layoutWidget_2;
+    QHBoxLayout *horizontalLayout;
     QPushButton *alogback;
+    QSpacerItem *horizontalSpacer;
+    QLabel *label;
+    QSpacerItem *horizontalSpacer_2;
 
     void setupUi(QWidget *Adminlogin)
     {
         if (Adminlogin->objectName().isEmpty())
             Adminlogin->setObjectName(QString::fromUtf8("Adminlogin"));
         Adminlogin->resize(560, 355);
-        layoutWidget = new QWidget(Adminlogin);
+        widget = new QWidget(Adminlogin);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(0, 0, 561, 361));
+        widget->setStyleSheet(QString::fromUtf8("#widget{background-image: url(:/new/prefix1/img/addpage.png);}"));
+        layoutWidget = new QWidget(widget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(0, 140, 531, 36));
+        layoutWidget->setGeometry(QRect(0, 140, 531, 45));
         horizontalLayout_2 = new QHBoxLayout(layoutWidget);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -85,60 +90,7 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_4);
 
-        widget = new QWidget(Adminlogin);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(0, 40, 531, 101));
-        layoutWidget_2 = new QWidget(widget);
-        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(5, 0, 531, 102));
-        horizontalLayout = new QHBoxLayout(layoutWidget_2);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
-        label = new QLabel(layoutWidget_2);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setMaximumSize(QSize(400, 100));
-        label->setPixmap(QPixmap(QString::fromUtf8("C:/Users/HAIHO/ATSystem/ATSystem/Images/log.png")));
-        label->setScaledContents(true);
-
-        horizontalLayout->addWidget(label);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer_2);
-
-        layoutWidget_3 = new QWidget(Adminlogin);
-        layoutWidget_3->setObjectName(QString::fromUtf8("layoutWidget_3"));
-        layoutWidget_3->setGeometry(QRect(0, 300, 531, 30));
-        horizontalLayout_4 = new QHBoxLayout(layoutWidget_3);
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
-        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_7);
-
-        ptn_login = new QPushButton(layoutWidget_3);
-        ptn_login->setObjectName(QString::fromUtf8("ptn_login"));
-
-        horizontalLayout_4->addWidget(ptn_login);
-
-        horizontalSpacer_9 = new QSpacerItem(20, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_9);
-
-        ptn_reset = new QPushButton(layoutWidget_3);
-        ptn_reset->setObjectName(QString::fromUtf8("ptn_reset"));
-
-        horizontalLayout_4->addWidget(ptn_reset);
-
-        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_8);
-
-        layoutWidget_4 = new QWidget(Adminlogin);
+        layoutWidget_4 = new QWidget(widget);
         layoutWidget_4->setObjectName(QString::fromUtf8("layoutWidget_4"));
         layoutWidget_4->setGeometry(QRect(0, 200, 531, 71));
         horizontalLayout_3 = new QHBoxLayout(layoutWidget_4);
@@ -181,9 +133,64 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_6);
 
-        alogback = new QPushButton(Adminlogin);
+        layoutWidget_3 = new QWidget(widget);
+        layoutWidget_3->setObjectName(QString::fromUtf8("layoutWidget_3"));
+        layoutWidget_3->setGeometry(QRect(0, 300, 531, 30));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget_3);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_7);
+
+        ptn_login = new QPushButton(layoutWidget_3);
+        ptn_login->setObjectName(QString::fromUtf8("ptn_login"));
+
+        horizontalLayout_4->addWidget(ptn_login);
+
+        horizontalSpacer_9 = new QSpacerItem(20, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_9);
+
+        ptn_reset = new QPushButton(layoutWidget_3);
+        ptn_reset->setObjectName(QString::fromUtf8("ptn_reset"));
+
+        horizontalLayout_4->addWidget(ptn_reset);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_8);
+
+        widget_2 = new QWidget(widget);
+        widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        widget_2->setGeometry(QRect(0, 40, 531, 101));
+        layoutWidget_2 = new QWidget(widget_2);
+        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
+        layoutWidget_2->setGeometry(QRect(5, 0, 531, 102));
+        horizontalLayout = new QHBoxLayout(layoutWidget_2);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        alogback = new QPushButton(layoutWidget_2);
         alogback->setObjectName(QString::fromUtf8("alogback"));
-        alogback->setGeometry(QRect(0, 0, 93, 28));
+
+        horizontalLayout->addWidget(alogback);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        label = new QLabel(layoutWidget_2);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setMaximumSize(QSize(400, 100));
+        label->setPixmap(QPixmap(QString::fromUtf8("C:/Users/HAIHO/ATSystem/ATSystem/Images/log.png")));
+        label->setScaledContents(true);
+
+        horizontalLayout->addWidget(label);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
 
         retranslateUi(Adminlogin);
 
@@ -193,13 +200,13 @@ public:
     void retranslateUi(QWidget *Adminlogin)
     {
         Adminlogin->setWindowTitle(QApplication::translate("Adminlogin", "Form", 0, QApplication::UnicodeUTF8));
-        lb_login->setText(QApplication::translate("Adminlogin", "<html><head/><body><p><span style=\" font-weight:600;\">\347\256\241\347\220\206\345\221\230\347\256\241\347\220\206\347\231\273\345\275\225\347\225\214\351\235\242</span></p></body></html>", 0, QApplication::UnicodeUTF8));
-        label->setText(QString());
-        ptn_login->setText(QApplication::translate("Adminlogin", "\347\231\273  \345\275\225", 0, QApplication::UnicodeUTF8));
-        ptn_reset->setText(QApplication::translate("Adminlogin", "\351\207\215  \347\275\256", 0, QApplication::UnicodeUTF8));
+        lb_login->setText(QApplication::translate("Adminlogin", "<html><head/><body><p><span style=\" font-size:20pt; font-weight:600;\">\347\256\241\347\220\206\345\221\230\347\256\241\347\220\206\347\231\273\345\275\225\347\225\214\351\235\242</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         lb_user->setText(QApplication::translate("Adminlogin", "<html><head/><body><p><span style=\" font-weight:600;\">\347\224\250\346\210\267\345\220\215\357\274\232</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         lb_pwd->setText(QApplication::translate("Adminlogin", "<html><head/><body><p><span style=\" font-weight:600;\">\345\257\206    \347\240\201\357\274\232</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        ptn_login->setText(QApplication::translate("Adminlogin", "\347\231\273  \345\275\225", 0, QApplication::UnicodeUTF8));
+        ptn_reset->setText(QApplication::translate("Adminlogin", "\351\207\215  \347\275\256", 0, QApplication::UnicodeUTF8));
         alogback->setText(QApplication::translate("Adminlogin", "\350\277\224\345\233\236", 0, QApplication::UnicodeUTF8));
+        label->setText(QString());
     } // retranslateUi
 
 };

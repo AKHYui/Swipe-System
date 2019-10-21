@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Maincontrol.h'
 **
-** Created: Sat Oct 19 15:37:52 2019
+** Created: Mon Oct 21 16:13:32 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -1,6 +1,7 @@
 #include "Adminlogin.h"
 #include "ui_Adminlogin.h"
 #include "Maincontrol.h"
+#include "Adminpage.h"
 
 Adminlogin::Adminlogin(QWidget *parent) :
     QWidget(parent),
@@ -33,8 +34,9 @@ void Adminlogin::on_ptn_reset_clicked()
 //登录
 void Adminlogin::on_ptn_login_clicked()
 {
-    if(ui->user->text()=="admin" && ui->pwd->text()=="111111"){//账号正确时
-        ae.show();
+    if(ui->user->text()=="111111" && ui->pwd->text()=="111111"){//账号正确时
+        ae = new Adminpage();
+        ae->show();
         this->hide();
     }
     else{//账号错误时

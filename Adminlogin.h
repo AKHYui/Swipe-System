@@ -25,7 +25,7 @@ private slots:
 
 private:
     Ui::Adminlogin *ui;
-    Adminpage ae;
+    Adminpage *ae;
 };
 
 #endif // ADMINLOGIN_H

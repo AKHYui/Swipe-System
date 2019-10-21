@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Selectpage.h'
 **
-** Created: Tue Sep 24 10:09:25 2019
+** Created: Mon Oct 21 16:13:33 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Selectpage[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,19 +32,32 @@ static const uint qt_meta_data_Selectpage[] = {
 
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x08,
-      19,   11,   11,   11, 0x08,
-      41,   11,   11,   11, 0x08,
-      67,   11,   11,   11, 0x08,
-      94,   11,   11,   11, 0x08,
+      34,   19,   11,   11, 0x08,
+      74,   63,   11,   11, 0x08,
+     117,  104,   11,   11, 0x08,
+     156,  149,   11,   11, 0x08,
+     186,   11,   11,   11, 0x08,
+     208,   11,   11,   11, 0x08,
+     234,   11,   11,   11, 0x08,
+     261,   11,   11,   11, 0x08,
+     285,   11,   11,   11, 0x08,
+     317,  312,   11,   11, 0x08,
+     337,   11,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Selectpage[] = {
-    "Selectpage\0\0load()\0on_sel_back_clicked()\0"
-    "on_btn_dbselect_clicked()\0"
+    "Selectpage\0\0load()\0cmdType,result\0"
+    "on_search_error(int,QString)\0block,data\0"
+    "on_ted_showID(int,QByteArray)\0"
+    "decID,byteID\0onNewCard(qlonglong,QByteArray)\0"
+    "cardid\0on_search_success(QByteArray)\0"
+    "on_sel_back_clicked()\0on_btn_dbselect_clicked()\0"
     "on_btn_dbrefresh_clicked()\0"
     "on_pbn_search_clicked()\0"
+    "on_pbn_searchLog_clicked()\0card\0"
+    "log_load(qlonglong)\0on_readcard_clicked()\0"
 };
 
 const QMetaObject Selectpage::staticMetaObject = {
@@ -77,13 +90,20 @@ int Selectpage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: load(); break;
-        case 1: on_sel_back_clicked(); break;
-        case 2: on_btn_dbselect_clicked(); break;
-        case 3: on_btn_dbrefresh_clicked(); break;
-        case 4: on_pbn_search_clicked(); break;
+        case 1: on_search_error((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 2: on_ted_showID((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const QByteArray(*)>(_a[2]))); break;
+        case 3: onNewCard((*reinterpret_cast< qlonglong(*)>(_a[1])),(*reinterpret_cast< const QByteArray(*)>(_a[2]))); break;
+        case 4: on_search_success((*reinterpret_cast< const QByteArray(*)>(_a[1]))); break;
+        case 5: on_sel_back_clicked(); break;
+        case 6: on_btn_dbselect_clicked(); break;
+        case 7: on_btn_dbrefresh_clicked(); break;
+        case 8: on_pbn_search_clicked(); break;
+        case 9: on_pbn_searchLog_clicked(); break;
+        case 10: log_load((*reinterpret_cast< qlonglong(*)>(_a[1]))); break;
+        case 11: on_readcard_clicked(); break;
         default: ;
         }
-        _id -= 5;
+        _id -= 12;
     }
     return _id;
 }
